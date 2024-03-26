@@ -1,0 +1,210 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+          <div class="personal-input">
+            <form class="example-form" [formGroup]="EmploymentTypeCsdField" autocomplete="off">
+              <div class="info-head">
+                <img src="../../../assets/images/bar.png" class="header-vector"/>
+               <p>Employement details</p> 
+              </div>
+           <!-- Marital csd (checkbox) Start -->
+           <div class="csd-Input">
+            <div id="input">
+              <label>Type of employement</label>
+              <div id="csd-card">
+                <div (click)="toggleSelection(employmenttype)" *ngFor="let employmenttype of employmenttype" class="csd-card">
+                  <div class="csd-radio" style="display: flex; align-items: center;">
+                    <mat-radio-group>
+                      <mat-radio-button [checked]="employmenttype.selected" [value]="employmenttype.selected" formcontrolname="employmenttypeCard"></mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                  <div class="employmenttype" style="display: flex; align-items: center;">
+                    <span>{{employmenttype.name}}</span>
+                    <!-- Add input field for "Other" option -->
+                  
+                    <!-- <input *ngIf="employmenttype.name === 'Other'" 
+                    type="text" 
+                    placeholder="Please Specify" 
+                    class="example-input"
+                    formControlName="otheremploymenttype"
+                    style="height: 5px;margin-left: 7px;width: 200px" 
+                    /> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="instruct-text">
+            <span>Employer</span>   
+          </div>
+
+          <div class="Input">
+            <div id="input">
+              <label>Employer's name</label>
+              <input
+                class="example-input"
+                placeholder=""
+                type="text"
+                formControlName="employerName"
+              />
+            </div>
+            
+            <div id="input">
+              <label>Industry/Sector</label>
+              <input
+                class="example-input"
+                type="text"
+                formControlName="Industry"
+              />
+            </div>
+         </div> 
+
+         <div id="input" style="margin-top: 10px">
+          <label>Address</label>
+            <input type="number"
+            placeholder=""
+            class="example-input"
+            formControlName="address">
+          </div>
+
+          <div class="Input">
+            <div id="input">
+              <label>Town/City</label>
+              <input
+                class="example-input"
+                placeholder=""
+                type="text"
+                formControlName="cityTown"
+              />
+            </div>
+            
+            <div id="input">
+              <label>Employer telephone</label>
+              <input
+                class="example-input"
+                type="number"
+                formControlName="employerTel"
+              />
+            </div>
+         </div> 
+
+          <div class="instruct-text">
+            <span>Employee</span>   
+          </div>
+          <div class="form-inputs1">
+            <div id="input">
+              <label>Employment date</label>
+                <input type="date"
+                placeholder=""
+                class="example-input"
+                formControlName="employmentDate">
+              </div>
+
+          <div id="input">
+            <label>Contract expiry date(if applicable)</label>
+              <input 
+              type="date"
+              placeholder=""
+              class="example-input"
+              formControlName="contractExpdate">
+            </div>
+  
+          <div id="input">
+             <label>SSNIT number</label>
+              <input 
+              placeholder="Please specify"
+              class="example-input"
+              type="number"
+              formControlName="ssnitNumber">
+          </div>
+          </div>
+          <div class="Input">
+            <div id="input">
+              <label>Telephone Number</label>
+              <input
+                class="example-input"
+                placeholder=""
+                type="number"
+                formControlName="telNum"
+              />
+            </div>
+            
+            <div id="input">
+              <label>Highest level of education</label>
+              <input
+                class="example-input"
+                type="text"
+                formControlName="eduLevel"
+              />
+            </div>
+         </div> 
+
+         <div class="Input">
+          <div id="input">
+            <label>Occupation</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="text"
+              formControlName="occupation"
+            />
+          </div>
+          
+          <div id="input">
+            <label>Designation</label>
+            <input
+              class="example-input"
+              type="text"
+              formControlName="designation"
+            />
+          </div>
+       </div> 
+
+       <div class="form-inputs1">
+        <div id="input">
+          <label>Gross monthly salary</label>
+            <input type="text"
+            placeholder=""
+            class="example-input"
+            formControlName="grossMonthSalary">
+          </div>
+
+      <div id="input">
+        <label>Net month salary</label>
+          <input 
+          type="text"
+          placeholder=""
+          class="example-input"
+          formControlName="netmonthSalary">
+        </div>
+
+      <div id="input">
+         <label>Staff number</label>
+          <input 
+          placeholder="Please specify"
+          class="example-input"
+          type="number"
+          formControlName="staffNumber">
+      </div>
+      </div>
+
+
+          <div class="instruct-text">
+            <span>Previous Employer</span> (if less than 12 months with current employer)  
+            </div>
+
+            <div id="input" style="margin-top: 10px">
+              <label>Period employed</label>
+                <input type="date"
+                placeholder=""
+                class="example-input"
+                formControlName="periodEmployed">
+              </div>
+
+
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>

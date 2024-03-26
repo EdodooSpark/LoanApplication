@@ -1,0 +1,93 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+          <div class="personal-input">
+            <form class="example-form" [formGroup]="ExistingUnsecuredLoanCsdField" autocomplete="off">
+              <div class="info-head">
+                <img src="../../../assets/images/bar.png" class="header-vector"/>
+               <p>Existing unsecured loans and other credit facilities</p> 
+              </div>
+
+              <div id="input">
+                <label>Total</label>
+                <input
+                  class="example-input"
+                  type="number"
+                  formControlName="total"
+                />
+              </div>
+
+           <!-- DeclaredInsolvent csd (checkbox) Start -->
+           <div class="csd-Input">
+            <div id="input">
+              <label>Have you been declared insolvent in the last ten years?</label>
+              <div id="csd-card">
+                <div (click)="toggleSelection(declaredinsolvent)" *ngFor="let declaredinsolvent of declaredinsolvent" class="csd-card">
+                  <div class="csd-radio" style="display: flex; align-items: center;">
+                    <mat-radio-group>
+                      <mat-radio-button [checked]="declaredinsolvent.selected" [value]="declaredinsolvent.selected" formcontrolname="declaredinsolventCard"></mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                  <div class="declaredinsolvent" style="display: flex; align-items: center;">
+                    <span>{{declaredinsolvent.name}}</span>
+                    <!-- Add input field for "Other" option -->
+                     <input 
+                    *ngIf="declaredinsolvent.name === 'If yes,rehabilitation date'" 
+                    type="date" 
+                    placeholder="" 
+                    class="example-input"
+                    formControlName="ifyes"
+                    style="height: 10px;width: 100%;border: #6e6d6d 1px solid;" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         <!--  guarantor csd (checkbox) Start -->
+         <div class="Input">
+            <div id="input">
+              <label>Are you a guarantor/surety for anybody or anything?</label>
+              <div id="csd-card1" style="display:flex; flex-direction: row;">
+                <div (click)="toggleSelection2(guarantor)" *ngFor="let guarantor of guarantor; let index = index" class="csd-card1">                      
+                   <div class="csd-radio" style="display: flex; align-items: center;">
+                    <mat-radio-group >
+                      <mat-radio-button [checked]="guarantor.selected"  [value]="guarantor.selected" formcontrolname="guarantorCard"></mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+          
+                  <div class="guarantor" style="display: flex; align-items: center;">
+                   <span>{{guarantor.name}}</span>
+                    <!-- Add input field for "Other" option -->
+                    <!-- <input 
+                    *ngIf="guarantor.name === 'If yes,please give details of guarantee'" 
+                    type="date" 
+                    placeholder="" 
+                    class="example-input"
+                    formControlName="ifYesGuarantee"
+                    style="height: 7px;width: 250px" 
+                    /> -->
+                  </div>
+                </div>
+                
+                </div> 
+            </div>
+            <div id="input">
+              <label>If yes,please give details of guarantee</label>
+              <input
+                class="example-input"
+                type="text"
+                formControlName="GuaranteeDetail"
+              />
+        </div>
+            </div>
+         
+
+       
+
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>

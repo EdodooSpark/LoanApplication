@@ -1,0 +1,83 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+          <div class="personal-input">
+            <form class="example-form" [formGroup]="FinancialInfoCsdField" autocomplete="off">
+              <div class="info-head">
+                <img src="../../../assets/images/bar.png" class="header-vector"/>
+               <p>Financial Information (if applicable)</p> 
+              </div>
+     
+
+          <div class="Input">
+            <div id="input">
+              <label>Rent/mortgage payment</label>
+              <input
+                class="example-input"
+                placeholder=""
+                type="text"
+                formControlName="rentpayment"
+              />
+            </div>
+            
+            <div id="input">
+              <label>Vehicle finance payment</label>
+              <input
+                class="example-input"
+                type="text"
+                formControlName="vehiclePayment"
+              />
+            </div>
+         </div> 
+         
+         <div class="Input">
+          <div id="input">
+            <label>Other verifiable monthly income</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="text"
+              formControlName="verifiableIncome"
+            />
+          </div>
+          <div id="input">
+            <label>Other debt payments</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="text"
+              formControlName="debtPayment"
+            />
+       </div>
+       </div>
+
+       <div class="Input">
+        <div id="input">
+          <label>Guaranteed bonus/13th cheque (if applicable)</label>
+          <input
+            class="example-input"
+            placeholder=""
+            type="number"
+            formControlName="guaranteedBonus"
+          />
+          </div>
+
+          <div id="input">
+            <label>Other monthly commitments</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="text"
+              formControlName="monthlyCommitment"
+            />
+          </div>
+        </div>
+        
+        
+     
+
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>

@@ -1,0 +1,241 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+          <div class="personal-input">
+            <form class="example-form" [formGroup]="LoanApplicationDetailsCsdField" autocomplete="off">
+              <div class="info-head">
+                <img src="../../../assets/images/bar.png" class="header-vector"/>
+              <p> Loan application details(To be completed in the presence ot Stanbic officers )</p> 
+              </div>
+
+              <div id="input">
+                <label>Loan amount applied for</label>
+                <input
+                  class="example-input"
+                  type="number"
+                  formControlName="loanAmt"
+                />
+              </div>
+
+           <!-- Loantype csd (checkbox) Start -->
+           <div class="csd-Input">
+            <div id="input">
+              <label>Loan type</label>
+              <div id="csd-card">
+                <div (click)="toggleSelection(loantype)" *ngFor="let loantype of loantype" class="csd-card">
+                  <div class="csd-radio" style="display: flex; align-items: center;">
+                    <mat-radio-group>
+                      <mat-radio-button [checked]="loantype.selected" [value]="loantype.selected" formcontrolname="loantypeCard"></mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                  <div class="loantype" style="display: flex; align-items: center;">
+                    <span>{{loantype.name}}</span>
+                    <!-- Add input field for "Other" option -->
+                     <input 
+                    *ngIf="loantype.name === 'Other'" 
+                    type="text" 
+                    placeholder="Please specify" 
+                    class="example-input"
+                    formControlName="otherloantype"
+                    style="height: 10px;width: 100%;border: #6e6d6d 1px solid;" 
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+         <!--  interestrate csd (checkbox) Start -->
+         <div class="Input">
+            <div id="input">
+              <label>Interest rate</label>
+              <div id="csd-card1">
+                <div (click)="toggleSelection2(interestrate)" *ngFor="let interestrate  of interestrate; let index = index" class="csd-card1">                      
+                   <div class="csd-radio" style="display: flex; align-items: center;">
+                    <mat-radio-group >
+                      <mat-radio-button [checked]="interestrate.selected"  [value]="interestrate.selected" formcontrolname="interestrateCard"></mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+          
+                  <div class="interestrate" style="display: flex; align-items: center;">
+                   <span>{{interestrate.name}}</span>
+                    <!-- Add input field for "Other" option -->
+                    <!-- <input 
+                    *ngIf="interestrate.name === 'Other'" 
+                    type="date" 
+                    placeholder="" 
+                    class="example-input"
+                    formControlName="interestrate"
+                    style="height: 7px;width: 250px" 
+                    /> -->
+                  </div>
+                </div>
+                
+                </div> 
+            </div>
+
+            <div id="input">
+              <label>Score</label>
+              <input
+                class="example-input"
+                type="number"
+                formControlName="score"
+              />
+            </div>
+
+        <div id="input">
+              <label>Base rate</label>
+              <div class="nested-input">
+              <input
+                class="example-input"
+                type="text"
+                id="base-rate"
+                placeholder="from"
+                formControlName="from"
+              /> <div style="display: flex;justify-content:center;align-Items:center">-</div>
+              <input
+              class="example-input"
+              type="text"
+              id="base-rate"
+              placeholder="to"
+              formControlName="to"
+            />
+          </div>
+        </div>
+        <div id="input">
+          <label>Margin</label>
+          <div class="nested-input">
+          <input
+            class="example-input"
+            type="text"
+            id="margin"
+            formControlName="marginfirst"
+          /> <div style="display: flex;justify-content:center;align-Items:center">-</div>
+          <input
+            class="example-input"
+            type="text"
+            id="margin"
+            formControlName="marginsecond"
+          />
+        </div>
+    </div>
+            </div>
+         
+
+            <div class="csd-Input">
+              <div id="input">
+                <label>Repayment method</label>
+                <div id="csd-card">
+                  <div (click)="toggleSelection3(repaymentmethod)" *ngFor="let repaymentmethod of repaymentmethod" class="csd-card">
+                    <div class="csd-radio" style="display: flex; align-items: center;">
+                      <mat-radio-group>
+                        <mat-radio-button [checked]="repaymentmethod.selected" [value]="repaymentmethod.selected" formcontrolname="repaymentmethodCard"></mat-radio-button>
+                      </mat-radio-group>
+                    </div>
+                    <div class="repaymentmethod" style="display: flex; align-items: center;">
+                      <span>{{repaymentmethod.name}}</span>
+                      <!-- Add input field for "Other" option -->
+                       <!-- <input 
+                      *ngIf="repaymentmethod.name === 'Other'" 
+                      type="date" 
+                      placeholder="" 
+                      class="example-input"
+                      formControlName="Otherrepaymentmethod"
+                      style="height: 10px;width: 250px;border: #6e6d6d 1px solid;" 
+                      /> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="Input">
+              <div id="input">
+                <label>Term of loan(Months)</label>
+                <input
+                  class="example-input"
+                  type="number"
+                  formControlName="loanTerm"
+                />
+              </div>
+              <div id="input">
+                <label>Repayment amount(As per attached repayment schedule)</label>
+                <input
+                  class="example-input"
+                  type="number"
+                  formControlName="repaymentamt"
+                />
+          </div>
+              </div>
+           
+                <!--  loanprotectioncover csd (checkbox) Start -->
+         <div class="Input">
+          <div id="input">
+            <label>Loan protection cover</label>
+            <div id="csd-card1">
+              <div (click)="toggleSelection4(loanprotectioncover)" *ngFor="let loanprotectioncover  of loanprotectioncover; let index = index" class="csd-card1">                      
+                 <div class="csd-radio" style="display: flex; align-items: center;">
+                  <mat-radio-group >
+                    <mat-radio-button [checked]="loanprotectioncover.selected"  [value]="loanprotectioncover.selected" formcontrolname="loanprotectioncoverCard"></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+        
+                <div class="loanprotectioncover" style="display: flex; align-items: center;">
+                 <span>{{loanprotectioncover.name}}</span>
+                  <!-- Add input field for "Other" option -->
+                  <!-- <input 
+                  *ngIf="loanprotectioncover.name === 'Other'" 
+                  type="date" 
+                  placeholder="" 
+                  class="example-input"
+                  formControlName="otherloanprotectioncover"
+                  style="height: 7px;width: 250px" 
+                  /> -->
+                </div>
+              </div>
+              
+              </div> 
+          </div>
+          <div id="input">
+            <label>Accept lesser offer</label>
+            <div id="csd-card1">
+              <div (click)="toggleSelection5(lesseroffer)" *ngFor="let lesseroffer  of lesseroffer; let index = index" class="csd-card1">                      
+                 <div class="csd-radio" style="display: flex; align-items: center;">
+                  <mat-radio-group >
+                    <mat-radio-button [checked]="lesseroffer.selected"  [value]="lesseroffer.selected" formcontrolname="lesserofferCard"></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+        
+                <div class="lesseroffer" style="display: flex; align-items: center;">
+                 <span>{{lesseroffer.name}}</span>
+                  <!-- Add input field for "Other" option -->
+                  <!-- <input 
+                  *ngIf="lesseroffer.name === 'Other'" 
+                  type="date" 
+                  placeholder="" 
+                  class="example-input"
+                  formControlName="otherlesseroffer"
+                  style="height: 7px;width: 250px" 
+                  /> -->
+                </div>
+              </div>
+              
+              </div> 
+          </div>
+          </div>
+
+          <div id="input" style="margin-top: 10px;">
+            <label>Minimum amount</label>
+            <input
+              class="example-input"
+              type="number"
+              formControlName="minAmt"
+            />
+          </div>
+
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>

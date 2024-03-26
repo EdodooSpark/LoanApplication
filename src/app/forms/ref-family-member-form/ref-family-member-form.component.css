@@ -1,0 +1,196 @@
+.personal-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1% 0% 3% 0%;
+}
+
+.sub-personal-info {
+  background-color: white;
+  width: 100%;
+  height: fit-content;
+  /* border: 1.5px solid #eee;  */
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+    rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 13px;
+}
+
+.example-form {
+  padding: 10px 0px 2px 0px;
+  font-size: 12px;
+}
+
+.example-input {
+  padding: 8px;
+  border: 1.5px solid #eee;
+  border-radius: 5px;
+}
+
+.Input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#input {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+    align-items: center; */
+  width: 100%;
+  gap: 5px;
+}
+
+.csd-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+
+.instruct-text {
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 20px;
+  background-color: #d5e3fb;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+p{
+  position:relative;
+  top: -35px;
+  margin-left: 30px;
+  font-size: 16px;
+  font-weight: 500px;
+  color: #ffffff;
+  width:100%
+}
+
+.header-vector{
+  height: 45px;
+  width: 100%
+}
+
+.form-inputs {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  margin-top: 10px;
+  width: 100%;
+  gap: 15px;
+}
+
+.form-inputs1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+  width: 100%;
+  gap: 15px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Individual Csd (checkbox) Start */
+
+.csd-card {
+  all: unset;
+  border-radius: 4px;
+  border: 1.5px solid #eee;
+  background-color: #fafafa;
+  height: 10px;
+  /* width: 100%; */
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.2s ease-in-out;
+}
+
+.csd-card1 {
+  all: unset;
+  border-radius: 4px;
+  border: 1.5px solid #eee;
+  background-color: #fafafa;
+  height: 10px;
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: row;
+  transition: all 0.2s ease-in-out;
+}
+
+#csd-card1 {
+  gap: 5px;
+  
+}
+
+#csd-card {
+  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+span{
+width:100%;
+font-size:14px;
+font-weight: 400px;
+
+}
+
+.csd-text {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 22px;
+}
+
+.csd-Input {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+/* Individual Csd (checkbox) End */
+
+
+ /* Media Queries */
+
+@media (max-width: 950px){
+  .form-inputs1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 10px;
+    width: 100%;
+    gap: 15px;
+  }
+
+  .form-inputs{
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    margin-top: 10px;
+    width: 100%;
+    gap: 20px;
+  }
+
+}
+  
+
+
+
+

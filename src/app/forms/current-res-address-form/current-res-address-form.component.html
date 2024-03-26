@@ -1,0 +1,136 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+          <div class="personal-input">
+           
+            <form class="example-form" [formGroup]="CurrentResAddressCsdField" autocomplete="off">
+                <div class="info-head">
+              <img src="../../../assets/images/bar.png" class="header-vector"/>
+             <p>Current residential address</p> 
+            </div>       
+            <div class="Input">
+              <div id="input">
+                <label>House number</label>
+                <input
+                  class="example-input"
+                  placeholder=""
+                  type="number"
+                  formControlName="houseNumber"
+                />
+              </div>
+              
+              <div id="input">
+                <label>Street name</label>
+                <input
+                  class="example-input"
+                  type="text"
+                  formControlName="streetName"
+                />
+              </div>
+           </div> 
+
+           <div class="Input">
+            <div id="input">
+              <label>Name of community</label>
+              <input
+                class="example-input"
+                placeholder=""
+                type="text"
+                formControlName="communityName"
+              />
+            </div>
+            
+            <div id="input">
+              <label>Nearest landmark</label>
+              <input
+                class="example-input"
+                type="text"
+                formControlName="nearestLandmark"
+              />
+            </div>
+         </div> 
+
+         <div class="Input">
+          <div id="input">
+            <label>Town/City</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="text"
+              formControlName="town"
+            />
+          </div>
+          
+          <div id="input">
+            <label>Living at address since</label>
+            <input
+              class="example-input"
+              type="date"
+              formControlName="livingSinceDate"
+            />
+          </div>
+       </div> 
+
+           <!-- Individual csd (checkbox) Start -->
+           <div class="csd-Input">
+            <div id="input">
+              <label>Residential Status</label>
+              <div id="csd-card">
+                <div (click)="toggleSelection(resstatus)" *ngFor="let resstatus of resstatus" class="csd-card">
+                  <div class="csd-radio" style="display: flex; align-items: center;">
+                    <mat-radio-group>
+                      <mat-radio-button [checked]="resstatus.selected" [value]="resstatus.selected" formcontrolname="resstatusCard"></mat-radio-button>
+                    </mat-radio-group>
+                  </div>
+                  <div class="resstatus" style="display: flex; align-items: center;">
+                    <span>{{resstatus.name}}</span>
+                    <!-- Add input field for "Other" option -->
+                  
+                    <input *ngIf="resstatus.name === 'Other'" 
+                    type="text" 
+                    placeholder="Please Specify" 
+                    class="example-input"
+                    style="height: 10px;width: 100%;border: #717070 1px solid;margin-left:5px"                    formcontrolname="otherResSat"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="input">
+            <label>Postal Address</label>
+            <input
+              class="example-input"
+              placeholder="Postal Address"
+              type="text"
+              formControlName="postalAddress"
+            />
+          </div>
+
+          <div class="Input">
+            <div id="input">
+              <label>Town/City</label>
+              <input
+                class="example-input"
+                placeholder="Town/City"
+                type="text"
+                formControlName="city"
+              />
+            </div>
+            
+            <div id="input">
+              <label>Using postal address since</label>
+              <input
+                class="example-input"
+                type="date"
+                formControlName="postalSinceDate"
+              />
+            </div>
+         </div> 
+ 
+        
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>

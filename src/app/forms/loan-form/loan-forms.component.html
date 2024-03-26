@@ -1,0 +1,151 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+      <!-- <div class="csd-text">
+        Account Details
+      </div> -->
+          <div class="personal-input">
+            <div class="top-head">
+            <!--Insert div containing Stanbic logo here-->
+              <!-- <div class="sub-text">
+                <span>Personal Loan Application</span>  
+                </div> -->
+              </div> 
+
+              <div class="text">
+                <span>Customer Care-Centre<br>
+                  Toll free 0-800-1000-09(Vodafone)<br>
+                  1 8080(MTN)<br>
+                  www.stanbic.com.gh</span>  
+                </div>
+            <form class="example-form" [formGroup]="loanForms" autocomplete="off">
+             
+              <div class="Input">
+                <div id="input">
+                  <label>Name of CC/PSC</label>
+                  <input
+                    class="example-input"
+                    placeholder="Henry Dawson"
+                    type="text"
+                    formControlName="namePSC"
+                  />
+                </div>
+                
+                <div id="input">
+                  <label>CC/PSC code</label>
+                  <input
+                    class="example-input"
+                    placeholder="C834198"
+                    type="number"
+                    formControlName="pscCode"
+                  />
+                </div>
+             </div> 
+              
+              <div class="instruct-text">
+              <span>Please use block letters and fill in the form as completely and accurately as possible, to aid our successful of the application.</span>  
+              </div>
+
+              <div class="form-inputs">
+              <div id="input">
+                <label>Originator ID</label>
+                  <input type="number"
+                  placeholder="Originator ID"
+                  class="example-input"
+                  formControlName="originatorID">
+              
+                </div>
+      
+                <div id="input">
+                  <label>Branch</label>
+                <select id="Branch" name="branch" class="example-input" formcontrolname="branchName">
+                  <option value="" disabled selected>Select Branch</option>
+                  <option value="Dansoman">Dansoman</option>
+                  <option value="Achimota">Achimota</option>
+                  <option value="AirportCity">Airport City</option>
+                  <option value="Spintex">Spintex</option>
+                  <option value="Kasoa">Kasoa</option>
+                </select>
+              
+              </div>
+      
+              <div id="input">
+                 <label>Customer Number</label>
+                  <input 
+                  placeholder="Customer Number"
+                  class="example-input"
+                  type="number"
+                  id="customer"
+                  formControlName="customerNumber">
+              </div>
+                
+              </div>
+             <!-- Individual csd, Conditional csd, staffindicator csd (checkbox) Start -->
+             <!-- <app-indivdual-csd></app-indivdual-csd> -->
+             <div class="csd-Input">
+              <div id="input-card">
+                <label>Individual</label>
+              <div id="csd-card">
+              <div (click)="toggleSelection(individual)" *ngFor="let individual of individual" class="csd-card"> 
+                <div class="csd-radio" style="display: flex; align-items: center;">
+                  <mat-radio-group >
+                    <mat-radio-button [checked]="individual.selected"  [value]="individual.selected" formcontrolname="individualCard"></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+        
+                <div class="individual" style="display: flex; align-items: center;">
+                 <span>{{individual.name}}</span>
+                </div>
+                
+              </div> 
+          </div> 
+          </div> 
+
+                <div id="input-card">
+                  <label>Conditional</label>
+          <div id="csd-card" >
+            <div (click)="toggleSelection1(condictional)" *ngFor="let condictional of condictional" class="csd-card"> 
+              <div class="csd-radio" style="display: flex; align-items: center;">
+                <mat-radio-group >
+                  <mat-radio-button [checked]="condictional.selected"  [value]="condictional.selected" formcontrolname="condictionalCard"></mat-radio-button>
+                </mat-radio-group>
+              </div>
+      
+              <div class="condictional" style="display: flex; align-items: center;">
+               <span>{{condictional.name}}</span>
+              </div>
+              
+            </div> 
+          </div>
+                 </div>
+            
+                 <div id="input-card">
+                  <label>Staff Indicator</label>
+          <div id="csd-card">
+            <div (click)="toggleSelection2(staffindicator)" *ngFor="let staffindicator of staffindicator" class="csd-card"> 
+              <div class="csd-radio" style="display: flex; align-items: center;">
+                <mat-radio-group >
+                  <mat-radio-button [checked]="staffindicator.selected"  [value]="staffindicator.selected" formcontrolname="staffIndicatorCard"></mat-radio-button>
+                </mat-radio-group>
+              </div>
+      
+              <div class="staffindicator" style="display: flex; align-items: center;">
+               <span>{{staffindicator.name}}</span>
+              </div>
+              
+            </div> 
+          </div>
+                 </div>
+
+           </div>
+
+<!-- Individual csd, conditional csd, staff indicator csd (checkbox) End-->
+
+  
+
+        
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>

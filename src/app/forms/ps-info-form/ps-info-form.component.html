@@ -1,0 +1,196 @@
+<div class="personal-info">
+  <div class="sub-personal-info">
+    <div class="personal-input">
+      <form
+        class="example-form"
+        [formGroup]="PersonalIDCsdField"
+        autocomplete="off"
+      >
+        <div class="info-head">
+          <img src="../../../assets/images/bar.png" class="header-vector" />
+          <p>Personal Information</p>
+        </div>
+        <div class="form-inputs">
+          <div id="input">
+            <label>Title</label>
+            <select
+              id="Title"
+              name="Title"
+              class="example-input"
+              formcontrolname="Title"
+            >
+              <option value="" disabled selected>---Select Title---</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+            </select>
+          </div>
+
+          <div id="input">
+            <label>First Name</label>
+            <input
+              type="text"
+              placeholder="First name"
+              class="example-input"
+              formControlName="firstName"
+            />
+          </div>
+
+          <div id="input">
+            <label>Last Name</label>
+            <input
+              placeholder="Last Name"
+              class="example-input"
+              type="text"
+              formControlName="lastName"
+            />
+          </div>
+        </div>
+
+        <div class="Input">
+          <div id="input">
+            <label>Date Of Birth</label>
+            <input class="example-input" type="date" formControlName="dob" />
+          </div>
+
+          <!-- Gender csd (checkbox) Start -->
+          <div id="input">
+            <label>Gender</label>
+            <div id="csd-card1" style="display: flex; flex-direction: row">
+              <div
+                (click)="toggleSelection(gender, index)"
+                *ngFor="let gender of gender; let index = index"
+                class="csd-card1"
+              >
+                <div
+                  class="csd-radio"
+                  style="display: flex; align-items: center"
+                >
+                  <mat-radio-group>
+                    <mat-radio-button
+                      [checked]="gender.selected"
+                      [value]="gender.selected"
+                      formcontrolname="genderCard"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+                <div class="gender" style="display: flex; align-items: center">
+                  <span>{{ gender.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Gender csd (checkbox) End -->
+
+        <!-- Individual csd (checkbox) Start -->
+        <div class="csd-Input">
+          <div id="input">
+            <label>Personal Identification</label>
+            <div id="csd-card">
+              <div
+                (click)="toggleSelection2(personalid)"
+                *ngFor="let personalid of personalid"
+                class="csd-card"
+              >
+                <div
+                  class="csd-radio"
+                  style="display: flex; align-items: center"
+                >
+                  <mat-radio-group>
+                    <mat-radio-button
+                      [checked]="personalid.selected"
+                      [value]="personalid.selected"
+                      formcontrolname="personalidCard"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div
+                  class="personalid"
+                  style="display: flex; align-items: center"
+                >
+                  <span>{{ personalid.name }}</span>
+                  <!-- Add input field for "Other" option -->
+
+                  <input
+                    *ngIf="personalid.name === 'Other'"
+                    type="text"
+                    placeholder="Enter other identification"
+                    class="example-input"
+                    formControlName="otherpsID"
+                    style="
+                      height: 10px;
+                      width: 100%;
+                      border: #717070 1px solid;
+                      margin-left: 5px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- personalID csd (checkbox) End-->
+
+        <div class="Input">
+          <div id="input">
+            <label>ID Number</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="number"
+              formControlName="idNumber"
+            />
+          </div>
+
+          <div id="input">
+            <label>If not Ghana State country name</label>
+            <input
+              class="example-input"
+              type="text"
+              formControlName="countryName"
+            />
+          </div>
+        </div>
+
+        <div class="instruct-text">
+          <span class="span">Telephone</span> (country code - area code- phone
+          number,e.g.+233 303 8000)
+        </div>
+        <div class="form-inputs1">
+          <div id="input">
+            <label>Telephone (Home)</label>
+            <input
+              type="text"
+              placeholder="+23326879376"
+              class="example-input"
+              formControlName="telephoneHome"
+            />
+          </div>
+
+          <div id="input">
+            <label>Telephone (Work)</label>
+            <input
+              type="number"
+              placeholder="+233540892367"
+              class="example-input"
+              formControlName="telephoneWork"
+            />
+          </div>
+
+          <div id="input">
+            <label>Mobile Number</label>
+            <input
+              placeholder="Mobile Number"
+              class="example-input"
+              type="number"
+              formControlName="mobileNumber"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

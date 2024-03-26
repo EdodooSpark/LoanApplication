@@ -1,0 +1,151 @@
+<div class="personal-info">
+  <div class="sub-personal-info">
+    <div class="personal-input">
+      <div class="example-form">
+        <form [formGroup]="RefreeFamilyMemberCsdField" autocomplete="off">
+          <div class="info-head">
+            <img src="../../../assets/images/bar.png" class="header-vector" />
+            <p>Referee 1(Family member)</p>
+          </div>
+          <div class="form-inputs">
+            <div id="input">
+              <label>Title</label>
+              <select
+                id="Title"
+                name="Title"
+                class="example-input"
+                formcontrolname="Title"
+              >
+                <option value="" disabled selected>---Select Title---</option>
+                <option value="Mr">Mr</option>
+                <option value="Mrs">Mrs</option>
+                <option value="Miss">Miss</option>
+                <option value="Dr">Dr</option>
+              </select>
+            </div>
+
+            <div id="input">
+              <label>First Name</label>
+              <input
+                type="text"
+                placeholder="First name"
+                class="example-input"
+                formControlName="firstName"
+              />
+            </div>
+
+            <div id="input">
+              <label>Last Name</label>
+              <input
+                placeholder="Last Name"
+                class="example-input"
+                type="text"
+                formControlName="lastName"
+              />
+            </div>
+          </div>
+
+          <div class="form-inputs1">
+            <div id="input">
+              <label>Relationship</label>
+              <input
+                type="text"
+                placeholder=""
+                class="example-input"
+                formControlName="relationship"
+              />
+            </div>
+
+            <div id="input">
+              <label>Mobile Number</label>
+              <input
+                type="number"
+                placeholder=""
+                class="example-input"
+                formControlName="mobileNumber"
+              />
+            </div>
+
+            <div id="input">
+              <label>Date of birth</label>
+              <input
+                placeholder="Please specify"
+                class="example-input"
+                type="date"
+                formControlName="dob"
+              />
+            </div>
+          </div>
+
+          <div class="instruct-text">
+            <span>Residential Address</span>
+          </div>
+
+          <div class="form-inputs1">
+            <div id="input">
+              <label>House number</label>
+              <input
+                type="number"
+                placeholder=""
+                class="example-input"
+                formControlName="houseNumber"
+              />
+            </div>
+
+            <div id="input">
+              <label>Street Name</label>
+              <input
+                type="text"
+                placeholder=""
+                class="example-input"
+                formControlName="streetName"
+              />
+            </div>
+
+            <div id="input">
+              <label>Name of community</label>
+              <input
+                placeholder=""
+                class="example-input"
+                type="text"
+                formControlName="nameOfCommunity"
+              />
+            </div>
+          </div>
+
+          <div class="form-inputs1">
+            <div id="input">
+              <label>Nearest landmark</label>
+              <input
+                type="text"
+                placeholder=""
+                class="example-input"
+                formControlName="nearestLandmark"
+              />
+            </div>
+
+            <div id="input">
+              <label>Town/city</label>
+              <input
+                type="text"
+                placeholder=""
+                class="example-input"
+                formControlName="townCity"
+              />
+            </div>
+
+            <div id="input">
+              <label>Living at address since</label>
+              <input
+                placeholder=""
+                class="example-input"
+                type="date"
+                formControlName="livingAddressSince"
+              />
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

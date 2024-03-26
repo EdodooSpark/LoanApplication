@@ -1,0 +1,130 @@
+.personal-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1% 0% 3% 0%;
+    
+  }
+
+  .sub-personal-info {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    /* border: 1.5px solid #eee;  */
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
+      rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 13px;
+   
+  }
+
+  .example-form {
+    padding: 10px 0px 2px 0px;
+    font-size: 12px;
+  }
+  
+  .example-input {
+    padding: 5px;
+    border: 1.2px solid #444;
+    border-radius: none;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    position: relative;
+    bottom:8px;
+    background-color: #f5f2f2;
+    
+  }
+
+
+  .instruct-text {
+    font-size: 12px;
+    font-weight: 500;
+    /* margin-top: 20px; */
+    background-color: #d5e3fb;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  .info-text{
+    font-size: 13px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:5px;
+    margin-top: 10px;
+  }
+
+  .info-text span{
+    width:100%;
+    font-size: 13px;
+    font-weight: 500;
+    margin-left: 7px;
+    margin-right: 5px;
+    }
+
+  p{
+    position:relative;
+    font-size: 12px;
+    font-weight: 300px;
+    /* color: #ffffff; */
+    width:100%;
+    text-align: justify;
+    line-height: 2;
+  }
+  
+  .header-vector{
+    height: 45px;
+    width: 100%
+  }
+
+
+.instruct-text span{
+width:100%;
+font-size: 14px;
+font-weight: 400px;
+}
+
+.Input{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+#input{
+  display:flex;
+  flex-direction: column;
+  width: 100%;
+  gap:10px
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Media Queries */
+
+@media (max-width: 1124px){
+  .Input{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px
+  }
+
+}

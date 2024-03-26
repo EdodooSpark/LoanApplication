@@ -1,0 +1,156 @@
+<div class="personal-info">
+  <div class="sub-personal-info">
+    <div class="personal-input">
+      <form
+        class="example-form"
+        [formGroup]="MainBankingAccountCsdField"
+        autocomplete="off"
+      >
+        <div class="info-head">
+          <img src="../../../assets/images/bar.png" class="header-vector" />
+          <p>Main banking account details</p>
+        </div>
+
+        <!-- mainbankingaccount csd (checkbox) Start -->
+        <div class="csd-Input">
+          <div id="input">
+            <label>Type of employement</label>
+            <div id="csd-card">
+              <div
+                (click)="toggleSelection(mainbankingaccount)"
+                *ngFor="let mainbankingaccount of mainbankingaccount"
+                class="csd-card"
+              >
+                <div
+                  class="csd-radio"
+                  style="display: flex; align-items: center"
+                >
+                  <mat-radio-group>
+                    <mat-radio-button
+                      [checked]="mainbankingaccount.selected"
+                      [value]="mainbankingaccount.selected"
+                      formcontrolname="mainbankingaccountCard"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div
+                  class="mainbankingaccount"
+                  style="display: flex; align-items: center"
+                >
+                  <span>{{ mainbankingaccount.name }}</span>
+                  <!-- Add input field for "Other" option -->
+
+                  <input
+                    *ngIf="mainbankingaccount.name === 'Other'"
+                    type="text"
+                    placeholder="Please Specify"
+                    class="example-input"
+                    formControlName="othermainbankingaccount"
+                    style="
+                      height: 10px;
+                      width: 100%;
+                      border: #444 1px solid;
+                      margin-left: 5px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="Input">
+          <div id="input">
+            <label>Date Of Birth</label>
+            <input class="example-input" type="date" formControlName="dob" />
+          </div>
+
+          <!-- Gender csd (checkbox) Start -->
+          <div id="input">
+            <label>Gender</label>
+            <div id="csd-card1" style="display: flex; flex-direction: row">
+              <div
+                (click)="toggleSelection2(transaccount)"
+                *ngFor="let transaccount of transaccount; let index = index"
+                class="csd-card1"
+              >
+                <div
+                  class="csd-radio"
+                  style="display: flex; align-items: center"
+                >
+                  <mat-radio-group>
+                    <mat-radio-button
+                      [checked]="transaccount.selected"
+                      [value]="transaccount.selected"
+                      formcontrolname="transaccountCard"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+
+                <div
+                  class="transaccount"
+                  style="display: flex; align-items: center"
+                >
+                  <span>{{ transaccount.name }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="input" style="margin-top: 10px">
+          <label>Bank or financial institution</label>
+          <input
+            type="text"
+            placeholder=""
+            class="example-input"
+            formControlName="finacialInstitution"
+          />
+        </div>
+
+        <div class="Input">
+          <div id="input">
+            <label>Branch name</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="text"
+              formControlName="branchName"
+            />
+          </div>
+
+          <div id="input">
+            <label>Date opened [bank use]</label>
+            <input
+              class="example-input"
+              type="date"
+              formControlName="dateOpened"
+            />
+          </div>
+        </div>
+
+        <div class="Input">
+          <div id="input">
+            <label>Account number</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="number"
+              formControlName="accountNumber"
+            />
+          </div>
+
+          <div id="input">
+            <label>Branch code</label>
+            <input
+              class="example-input"
+              placeholder=""
+              type="number"
+              formControlName="branchCode"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

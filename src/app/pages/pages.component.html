@@ -1,0 +1,216 @@
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+/>
+
+<app-header></app-header>
+<div class="content">
+   
+  <div id="section2" class="main-container">
+  
+  <div class="sub-text">
+    <span>Personal Loan Application</span>  
+    </div>
+
+    <mat-horizontal-stepper class="wrapper" #stepper [orientation]="(stepperOrientation | async)!" >
+      <mat-step [stepControl]="firstFormGroup">
+        <!-- <ng-template matStepLabel>Fill out your name</ng-template> -->
+        <app-loan-forms></app-loan-forms>
+        <div class="btn">
+          <button class="backnxt" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <!-- 2nd stepper -->
+
+      <mat-step [stepControl]="secondFormGroup">
+        <!-- <ng-template matStepLabel>Personal Information</ng-template> -->
+        <app-ps-info-form></app-ps-info-form>
+
+        <div class="but">
+          <div class="btn">
+            <button class="backbtn" mat-button matStepperPrevious>Back</button>
+          </div>
+          <button class="backnxt" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <!-- 3rd Stepper -->
+
+      <mat-step [stepControl]="thirdFormGroup">
+        <!-- <ng-template matStepLabel>Current residential address</ng-template> -->
+        <app-current-res-address-form></app-current-res-address-form>
+        <div class="but">
+          <div class="btn">
+            <button class="backbtn" mat-button matStepperPrevious>Back</button>
+          </div>
+
+          <button class="backnxt" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+      <!-- 4th Stepper -->
+
+      <mat-step [stepControl]="fourthFormGroup">
+        <!-- <ng-template matStepLabel>Marital status and dependants</ng-template> -->
+        <app-marital-stat-depndants-form></app-marital-stat-depndants-form>
+        <div class="but">
+          <div class="btn">
+            <button class="backbtn" mat-button matStepperPrevious>Back</button>
+          </div>
+          <button class="backnxt" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+      <!-- 5th Stepper -->
+
+      <mat-step [stepControl]="fifthFormGroup">
+        <!-- <ng-template matStepLabel>Referee 1(Family member)</ng-template> -->
+        <app-ref-family-member-form></app-ref-family-member-form>
+        <div class="but">
+          <div class="btn">
+            <button class="backbtn" mat-button matStepperPrevious>Back</button>
+          </div>
+          <button class="backnxt" mat-button matStepperNext>Next</button>
+        </div>
+      </mat-step>
+
+        <mat-step [stepControl]="sixthFormGroup">
+            <app-ref-non-family-member-form></app-ref-non-family-member-form>
+            <div class="but">
+              <div class="btn">
+                <button class="backbtn" mat-button matStepperPrevious>
+                  Back
+                </button>
+              </div>
+              <button class="backnxt" mat-button matStepperNext>Next</button>
+            </div>
+            </mat-step>
+
+            <mat-step [stepControl]="seventhFormGroup"> 
+              <!-- <ng-template matStepLabel>Employement details</ng-template> -->
+              <app-employment-details-form></app-employment-details-form>
+              <div class="but">
+                <div class="btn">
+                  <button class="backbtn" mat-button matStepperPrevious>
+                    Back
+                  </button>
+                </div>
+                <button class="backnxt" mat-button matStepperNext>Next</button>
+              </div>
+            </mat-step>
+
+              <mat-step [stepControl]="eightFormGroup">
+              <!-- <ng-template matStepLabel>Main banking account details</ng-template> -->
+              <app-main-banking-account-form></app-main-banking-account-form>
+              <div class="but">
+                <div class="btn">
+                  <button class="backbtn" mat-button matStepperPrevious>
+                    Back
+                  </button>
+                </div>
+                <button class="backnxt" mat-button matStepperNext>Next</button>
+              </div>
+            </mat-step>
+
+            <mat-step [stepControl]="ninethFormGroup">
+              <!-- <ng-template matStepLabel>Financial Information</ng-template> -->
+            <app-financial-info-form></app-financial-info-form>
+            <div class="but">
+              <div class="btn">
+                <button class="backbtn" mat-button matStepperPrevious>
+                  Back
+                </button>
+              </div>
+              <button class="backnxt" mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+
+          <mat-step [stepControl]="tenthFormGroup">
+            <!-- <ng-template matStepLabel>Existing unsecured loans and other credit facilities</ng-template> -->
+            <app-existing-unsecured-loans-form></app-existing-unsecured-loans-form>
+            <div class="but">
+              <div class="btn">
+                <button class="backbtn" mat-button matStepperPrevious>
+                  Back
+                </button>
+              </div>
+              <button class="backnxt" mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+
+          
+            <mat-step [stepControl]="eleventhFormGroup">
+            <!-- <ng-template matStepLabel>Loan application details</ng-template> -->
+            <app-loan-app-details-form></app-loan-app-details-form>
+            <div class="but">
+              <div class="btn">
+                <button class="backbtn" mat-button matStepperPrevious>
+                  Back
+                </button>
+              </div>
+              <button class="backnxt" mat-button matStepperNext>Next</button>
+            </div>
+          </mat-step>
+
+  <mat-step [stepControl]="eleventhFormGroup">
+    <!-- <ng-template matStepLabel>Loan protection benefit</ng-template> -->
+    <app-loan-protection-benefit-form></app-loan-protection-benefit-form>
+    <div class="but">
+      <div class="btn">
+        <button class="backbtn" mat-button matStepperPrevious>
+          Back
+        </button>
+      </div>
+      <button class="backnxt" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+
+  <mat-step [stepControl]="twelvethFormGroup">
+    <!-- <ng-template matStepLabel>Loan protection benefit</ng-template> -->
+    <app-credit-ref-bureau-form></app-credit-ref-bureau-form>
+    <div class="but">
+      <div class="btn">
+        <button class="backbtn" mat-button matStepperPrevious>
+          Back
+        </button>
+      </div>
+      <button class="backnxt" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+    <mat-step [stepControl]="thirteenthFormGroup">
+      <!-- <ng-template matStepLabel>Loan protection benefit</ng-template> -->
+    <app-general-terms-conditions-form></app-general-terms-conditions-form>
+    <div class="but">
+      <div class="btn">
+        <button class="backbtn" mat-button matStepperPrevious>
+          Back
+        </button>
+      </div>
+      <button class="backnxt" mat-button matStepperNext>Next</button>
+    </div>
+  </mat-step>
+
+    <mat-step [stepControl]="forteenthFormGroup">
+      <!-- <ng-template matStepLabel>Loan protection benefit</ng-template> -->
+    <app-generaltwo-terms-conditions-form></app-generaltwo-terms-conditions-form>
+    <div class="but">
+      <div class="btn">
+        <button class="backbtn" mat-button matStepperPrevious>
+          Back
+        </button>
+      </div>
+      <button class="backnxt" mat-button matStepperNext>Submit</button>
+    </div>
+  </mat-step>
+ 
+ 
+
+</mat-horizontal-stepper>
+</div>
+  </div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>

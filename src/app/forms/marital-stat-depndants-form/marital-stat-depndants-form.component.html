@@ -1,0 +1,182 @@
+<div class="personal-info">
+  <div class="sub-personal-info">
+    <div class="personal-input">
+      <form
+        class="example-form"
+        [formGroup]="MaritalStatusDependantCsdField"
+        autocomplete="off"
+      >
+        <!-- Marital csd (checkbox) Start -->
+        <div class="info-head">
+          <img src="../../../assets/images/bar.png" class="header-vector" />
+          <p>Marital status and dependants</p>
+        </div>
+
+        <div class="csd-Input">
+          <div id="input">
+            <label>Marital status and dependants</label>
+            <div id="csd-card">
+              <div
+                (click)="toggleSelection(maritalstatus)"
+                *ngFor="let maritalstatus of maritalstatus"
+                class="csd-card"
+              >
+                <div
+                  class="csd-radio"
+                  style="display: flex; align-items: center"
+                >
+                  <mat-radio-group>
+                    <mat-radio-button
+                      [checked]="maritalstatus.selected"
+                      [value]="maritalstatus.selected"
+                      formcontrolname="maritalstatusCard"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div
+                  class="maritalstatus"
+                  style="display: flex; align-items: center"
+                >
+                  <span>{{ maritalstatus.name }}</span>
+                  <!-- Add input field for "Other" option -->
+
+                  <input
+                    *ngIf="maritalstatus.name === 'Other'"
+                    type="text"
+                    placeholder="Please Specify"
+                    class="example-input"
+                    formControlName="otherMaritalSat"
+                    style="
+                      height: 10px;
+                      width: 100%;
+                      border: #717070 1px solid;
+                      margin-left: 5px;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="csd-Input">
+          <div id="input">
+            <label>How Married</label>
+            <div id="csd-card">
+              <div
+                (click)="toggleSelection2(marriagetype)"
+                *ngFor="let marriagetype of marriagetype"
+                class="csd-card"
+              >
+                <div
+                  class="csd-radio"
+                  style="display: flex; align-items: center"
+                >
+                  <mat-radio-group>
+                    <mat-radio-button
+                      [checked]="marriagetype.selected"
+                      [value]="marriagetype.selected"
+                      formcontrolname="marriageTypeCard"
+                    ></mat-radio-button>
+                  </mat-radio-group>
+                </div>
+                <div
+                  class="marriagetype"
+                  style="display: flex; align-items: center"
+                >
+                  <span>{{ marriagetype.name }}</span>
+                  <!-- Add input field for "Other" option -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="instruct-text">
+          <span>Number of dependant</span>
+        </div>
+        <div class="form-inputs1">
+          <div id="input">
+            <label>Spouse</label>
+            <input
+              type="number"
+              placeholder=""
+              class="example-input"
+              formControlName="spouse"
+            />
+          </div>
+
+          <div id="input">
+            <label>Children</label>
+            <input
+              type="number"
+              placeholder=""
+              class="example-input"
+              formControlName="children"
+            />
+          </div>
+
+          <div id="input">
+            <label>Other</label>
+            <input
+              placeholder="Please specify"
+              class="example-input"
+              type="text"
+              formControlName="otherSpecify"
+            />
+          </div>
+        </div>
+
+        <div class="instruct-text">
+          <span>Spouse’s details</span> (if applicable)
+        </div>
+        <div class="form-inputs">
+          <div id="input">
+            <label>Title</label>
+            <select
+              id="Title"
+              name="Title"
+              class="example-input"
+              formcontrolname="Title"
+            >
+              <option value="" disabled selected>---Select Title---</option>
+              <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
+              <option value="Miss">Miss</option>
+              <option value="Dr">Dr</option>
+            </select>
+          </div>
+
+          <div id="input">
+            <label>First Name</label>
+            <input
+              type="text"
+              placeholder="First name"
+              class="example-input"
+              formControlName="firstName"
+            />
+          </div>
+
+          <div id="input">
+            <label>Last Name</label>
+            <input
+              placeholder="Last Name"
+              class="example-input"
+              type="text"
+              formControlName="lastName"
+            />
+          </div>
+        </div>
+        <div id="input" style="margin-top: 10px">
+          <label>Mobile Number</label>
+          <input
+            type="number"
+            placeholder=""
+            class="example-input"
+            formControlName="mobileNumber"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,290 @@
+<div class="personal-info">
+    <div class="sub-personal-info">
+          <div class="personal-input">
+            <form class="example-form" [formGroup]="LoanProtectionBenefitCsdField" autocomplete="off">
+              
+          <div class="instruct-text">
+            <span>Loan protection benefit - Stanbic Transactional account holder </span>
+            (official use)  
+            </div>
+
+            <div class="info-text">
+              <p>Loan protection cover is included as part of the monthly 
+                repayments and covers the outstanding balance in the event
+                 of permanent disability or death of the borrower.
+              <span>Premium charged is at a rate of 
+                <input type="number"
+                placeholder=""
+                class="example-input"
+                style="margin-top: 10px;margin-bottom: 15px"
+                formControlName="ratePercent">  % of monthly balance
+                 and forms part of the monthly loan repayment.</span> 
+                 First premium is <span>GHS</span>
+                 <input type="number"
+                 placeholder=""
+                 class="example-input"
+                 style="margin-top: 10px;margin-bottom: 5px"
+                 formControlName="premiumAmt"></p>
+                </div>
+
+
+                <div class="instruct-text">
+                  <span>Loan protection benefit - Direct payroll deduction customer </span>
+                  (official use)  
+                  </div>
+      
+                  <div class="info-text">
+                    <p>This loan facility has an inherent Loan Protection
+                       insurance which covers the outstanding balance in 
+                       the event of permanent disability and death of the borrower.
+                    <span>A one-off premium of
+                      <input type="number"
+                      placeholder=""
+                      class="example-input"
+                      style="margin-top: 10px;margin-bottom: 15px"
+                      formControlName="oneOffPremium">  
+                      % would be deducted upfront from the approved loan amount.</span> 
+                       First premium is <span>GHS</span>
+                       <input type="number"
+                       placeholder=""
+                       class="example-input"
+                       formControlName="firstPremiumAmt"
+                       style="margin-top: 10px;margin-bottom: 5px;width:60%">
+                      </p>
+                      </div>
+                      <p> <span style="font-weight: 600;font-size:15px">
+                        <i>NB:  </i></span> 
+                        <i style="font-weight: 500;font-size:13px">
+                          The premium quoted above may vary 
+                        depending on the final loan amount approved by our 
+                        Central Credit Office.</i></p>
+
+
+                        <div class="instruct-text">
+                          <span>Security offered </span>
+                           
+                          </div>
+              
+                          <div class="Input">
+                            <div id="input">
+                              <label>Value</label>
+                              <input
+                                class="example-input"
+                                type="text"
+                                formControlName="value"
+                              />
+                            </div>
+                            <div id="input">
+                              <label>Type</label>
+                              <input
+                                class="example-input"
+                                type="text"
+                                formControlName="type"
+                              />
+                        </div>
+                            </div>
+
+                            <div id="input">
+                              <label>Details</label>
+                              <input
+                                class="example-input"
+                                type="text"
+                                formControlName="details"
+                              />
+                        </div>
+        
+                
+                        <div class="instruct-text">
+                          <span>Debit authorisation (Stanbic Transactional account holder) - where applicable</span>
+                         </div>
+              
+                          <div class="info-text">
+                            <p>I,     
+                              <input type="text"
+                              placeholder=""
+                              class="example-input"
+                              style="margin-top: 10px;margin-bottom: 5px;width:65%"
+                              formControlName="name">
+  
+                              hereby authorise Stanbic Bank Ghana Ltd <br/>to 
+                              debit my account number
+
+                              <input type="number"
+                              placeholder=""
+                              class="example-input"
+                              style="margin-top: 10px;margin-bottom: 10px;width:50%"
+                              formControlName="accNumber">
+
+                              Stanbic Bank Ghana Ltd 
+
+                              <input type="text"
+                              placeholder=""
+                              class="example-input"
+                              style="margin-top: 5px;margin-bottom: 15px"
+                              formControlName="bankBranch"> 
+
+                              branch, with the repayment amount of the loan amount finally approved by the bank,
+                              until the debt is fully repaid.
+                              </p>
+                            </div>
+                             
+                            <div class="Input">
+                              <div id="input">
+                                <label>Customer name</label>
+                                <input
+                                  class="example-input"
+                                  type="text"
+                                  formControlName="cusName"
+                                />
+                              </div>
+                              <div id="input">
+                                <label>Date</label>
+                                <input
+                                  class="example-input"
+                                  type="date"
+                                  formControlName="date"
+                                />
+                          </div>
+                          </div>
+
+
+                          <div class="instruct-text">
+                            <span>Debit authorisation (Direct payroll deduction customer) - where applicable</span>
+                           </div>
+                
+                            <div class="info-text">
+                              <p>I,     
+                                <input type="text"
+                                placeholder=""
+                                class="example-input"
+                                style="margin-top: 10px;margin-bottom: 5px;width:65%"
+                                formControlName="fullName">
+    
+                                hereby authorise my employer to deduct the monthly 
+                                repayments for this facility if approved, direct 
+                                from my salary and paid to Stanbic Bank Ghana Limited
+                                 towards the repayment of my loan facility until the 
+                                 debt is fully paid.
+ 
+                                </p>
+                              </div>
+                               
+                              <div class="Input">
+                                <div id="input">
+                                  <label>Customer name</label>
+                                  <input
+                                    class="example-input"
+                                    type="text"
+                                    formControlName="customerName"
+                                  />
+                                </div>
+                                <div id="input">
+                                  <label>Date</label>
+                                  <input
+                                    class="example-input"
+                                    type="date"
+                                    formControlName="dateCus"
+                                  />
+                            </div>                
+                            </div>                
+
+
+                            <div class="instruct-text">
+                              <span>Customer declaration and acceptance</span>
+                             </div>
+                  
+                              <div class="info-text">
+                                <p>I confirm that the details provided above 
+                                  and in any attached documents are a true reflection
+                                   of my personal, employment and other details. In addition to
+                                  accepting this loan offer, I agree that the loan will
+                                   be fully repayable if I move my account to another bank 
+                                   or if my employment with current employer     
+                                  <input type="text"
+                                  placeholder=""
+                                  class="example-input"
+                                  style="margin-top: 10px;margin-bottom: 5px;width:65%"
+                                  formControlName="currentEmployer">
+      
+                                  ceases. I further confirm that the general terms
+                                   and conditions have been explained to me, and I 
+                                   agree to be bound by them, and that I am able to 
+                                   afford the repayments arising from the loan obligation.
+                                    I also confirm that a copy of the facility terms and 
+                                    conditions have also been given to me.
+   
+                                  </p>
+                                </div>
+                                
+                                  <div id="input">
+                                    <label>Date</label>
+                                    <input
+                                      class="example-input"
+                                      type="date"
+                                      formControlName="currentEmpDate"
+                                    />
+                                  </div>
+                                  
+                                  <div class="instruct-text">
+                                    <span>Employer Endorsement </span>
+                                    (Where applicable)
+                                   </div>
+                        
+                                    <div class="info-text">
+                                      <p>
+                                        In consideration of Stanbic Bank Ghana 
+                                        Limited granting a loan to     
+                                        <input type="text"
+                                        placeholder=""
+                                        class="example-input"
+                                        style="margin-top: 10px;margin-bottom: 5px;width:50%"
+                                        formControlName="loanGrant">
+            
+                                        an employee of
+
+                                        <input type="text"
+                                        placeholder=""
+                                        class="example-input"
+                                        style="margin-top: 10px;margin-bottom: 5px;width:65%"
+                                        formControlName="employeeOf">
+                                        
+                                        (full name of company).
+                                        We confirm that all workplace information provided 
+                                        by the application on this application is correct.
+
+                                        </p>
+                                      </div>
+                                       
+                                      <div class="Input">
+                                        <div id="input">
+                                          <label>Endorsed by</label>
+                                          <input
+                                            class="example-input"
+                                            type="text"
+                                            formControlName="endorsedBy"
+                                          />
+                                        </div>
+                                        <div id="input">
+                                          <label>Official title</label>
+                                          <input
+                                            class="example-input"
+                                            type="text"
+                                            formControlName="officialTitle"
+                                          />
+                                    </div>
+                                    <div id="input">
+                                      <label>Date</label>
+                                      <input
+                                        class="example-input"
+                                        type="date"
+                                        formControlName="dateEndorsed"
+                                      />
+                                </div>                        
+                                    </div>     
+
+          </form>
+          
+        </div>
+         
+      </div>  
+    </div>
